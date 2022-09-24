@@ -7,6 +7,17 @@ body {
   -moz-osx-font-smoothing: grayscale;
 }
 
+#delay {
+  font-size: 14px;
+  transition-property: font-size;
+  transition-duration: 4s;
+  transition-delay: 2s;
+}
+
+#delay:hover {
+  font-size: 36px;
+}
+
 .dropmenu {
   margin-left: 100px;
   margin-top: 100px;
@@ -16,11 +27,17 @@ body {
 .dropbox {
   display: flex;
   flex-direction: row;
+  align-content: center;
   justify-content: space-between;
   height: 40px;
   width: 100%;
-  border: 1px solid lightblue;
+  border: 2px solid lightblue;
   border-radius: 10px;
+}
+.selectedText{
+  margin: auto 0;
+  padding-left: 10px;
+  overflow: hidden;
 }
 .arrowIcon {
   align-self: center;
@@ -33,6 +50,7 @@ body {
   box-shadow: -1px 2px 4px grey;
   max-height: 200px;
   overflow: scroll;
+  transition: width 2s, height 2s, background-color 2s, transform 2s;
 }
 .optionRow {
   display: flex;
@@ -51,4 +69,16 @@ body {
   display: block;
   /* align-self: center; */
   margin-left: 10px;
+}
+
+@keyframes fade_in_show {
+  0% {
+       opacity: 0;
+       transform: scale(0)
+  }
+
+  100% {
+       opacity: 1;
+       transform: scale(1)
+  }
 }

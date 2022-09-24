@@ -49,16 +49,19 @@ export default class Dropdown extends Component {
   }
   
   render() {
-    const {showOptions} = this.state
+    const {showOptions, options} = this.state
     return(
       <div className='dropmenu'>
         <div className='dropbox' onClick={this.handleToggleMenu} onKeyPress={this.handleToggleMenu} role="button" tabIndex="0">
           <div className='selectedText'>{this.generateText()}</div>
-          {showOptions && <FontAwesomeIcon className='arrowIcon' icon={faSquareCaretUp}/>}
-          {!showOptions && <FontAwesomeIcon className='arrowIcon' icon={faSquareCaretDown}/>}
+          <FontAwesomeIcon className='arrowIcon' icon={showOptions ? faSquareCaretUp : faSquareCaretDown}/>
         </div>
-        {showOptions &&
-            <div className='droplist'>
+        {options.length > 0  &&
+            <div className='droplist' 
+              style={{
+                visibility : showOptions ? "visible" : "hidden", 
+                opacity: !showOptions ? "0" : "1",
+                transition: "all .2s",}}>
               {this.buildList()}
             </div>
         }

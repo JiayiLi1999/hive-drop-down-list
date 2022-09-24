@@ -65,6 +65,7 @@ body {
 
 .optionRow:hover {
   background-color: rgba(54, 160, 252, 0.1);
+  transition: 0.2s;
 }
 
 .icon {
@@ -73,5 +74,4 @@ body {
 
 .optionRow .optionText{
   display: block;
-  /* align-self: center; */
 }

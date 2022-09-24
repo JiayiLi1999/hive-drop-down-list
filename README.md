@@ -4,7 +4,7 @@ drop-down-list
 
 ### Objective
 
-* Using React or vanilla (plain) Javascript, build a reusable dropdown menu component. Please do not use a pre-built dropdown from a component library. We expect you to build this from scratch.
+* Using React or vanilla (plain) Javascript, build a reusable dropdown menu component. Please do not use a pre-built dropdown from a component library. It is built from scratch.
 
 
 ### Usage
@@ -27,18 +27,18 @@ const defaultOption = options[0];
 Single Choice
 
 ```JavaScript
-    const choices = ["male", "female", "nonbinary"]
-    return (
-        <Dropdown options={choices}/>
+const choices = ["male", "female", "nonbinary"]
+return (
+    <Dropdown options={choices}/>
 );
 ```
 
 Multiple Choices
 ```JavaScript
-    const choices2 = ["CA", "WA", "NY", "HA", "UI", "TX"]
-    return (
-        <Dropdown options={choices2} multiselect={true}/>
-    );
+const choices2 = ["CA", "WA", "NY", "HA", "UI", "TX"]
+return (
+    <Dropdown options={choices2} multiselect={true}/>
+);
 ```
 
 **Run example**
@@ -46,6 +46,11 @@ Multiple Choices
 ```
 $ open dist/index.html to check a simple demo
 ```
+#### Single Choice Demo
+<img src="https://github.com/JiayiLi1999/hive-drop-down-list/blob/main/example/singleChoiceDemo.gif" width=300>
+
+#### Multiple Choices Demo
+<img src="https://github.com/JiayiLi1999/hive-drop-down-list/blob/main/example/multipleChoicesDemo.gif" width=300>
 
 ### License
  Copyright @ Jiayi Li
